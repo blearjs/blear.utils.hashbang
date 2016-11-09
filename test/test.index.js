@@ -27,4 +27,10 @@ describe('测试文件', function () {
         expect(hashbang.stringify('/', '~~')).toEqual('#~~/');
         expect(hashbang.stringify('/123/456')).toEqual('#/123/456');
     });
+
+    it('.is', function () {
+        expect(hashbang.is('#!/', '!')).toBe(true);
+        expect(hashbang.is('#!/')).toBe(true);
+        expect(hashbang.is('#!/', '~')).toBe(false);
+    });
 });

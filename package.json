@@ -1,6 +1,6 @@
 {
   "name": "blear.utils.hashbang",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "hashbang",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
@@ -36,7 +36,9 @@
     "url": "https://github.com/blearjs/blear.utils.hashbang/issues"
   },
   "dependencies": {},
-  "peerDependencies": {},
+  "peerDependencies": {
+    "blear.utils.string": "1.x"
+  },
   "devDependencies": {
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",

@@ -6,6 +6,8 @@
 
 'use strict';
 
+var string = require('blear.utils.string');
+
 var reHashbang = /#([^/]*)\/.*$/;
 var reHashFlag = /^#([^/]*)/;
 
@@ -37,4 +39,16 @@ exports.parse = function (hashstring) {
 
     // 移除“#”
     return matches[0].replace(reHashFlag, '');
+};
+
+
+/**
+ * 判断是否 hashbang
+ * @param hashstring
+ * @param [split]
+ * @returns {boolean}
+ */
+exports.is = function (hashstring, split) {
+    var re = new RegExp('^#+' + string.escapeRegExp(split || ''));
+    return re.test(hashstring);
 };
