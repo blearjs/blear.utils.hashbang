@@ -13,10 +13,12 @@ var reHashFlag = /^#([^/]*)/;
 /**
  * 设置 hashbang 为 hashstring
  * @param hashbang {String} hashbang
+ * @param [split] {String} 分隔符
  * @returns {string}
  */
-exports.stringify = function (hashbang) {
-    return '#' + hashbang;
+exports.stringify = function (hashbang, split) {
+    split = split || '';
+    return '#' + split + hashbang;
 };
 
 

@@ -23,6 +23,8 @@ describe('测试文件', function () {
 
     it('.stringify', function () {
         expect(hashbang.stringify('/')).toEqual('#/');
+        expect(hashbang.stringify('/', '!')).toEqual('#!/');
+        expect(hashbang.stringify('/', '~~')).toEqual('#~~/');
         expect(hashbang.stringify('/123/456')).toEqual('#/123/456');
     });
 });
