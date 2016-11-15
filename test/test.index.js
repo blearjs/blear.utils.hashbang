@@ -30,7 +30,9 @@ describe('测试文件', function () {
 
     it('.is', function () {
         expect(hashbang.is('#!/', '!')).toBe(true);
-        expect(hashbang.is('#!/')).toBe(true);
+        expect(hashbang.is('#!', '!')).toBe(false);
+        expect(hashbang.is('#!/')).toBe(false);
+        expect(hashbang.is('#!')).toBe(false);
         expect(hashbang.is('#!/', '~')).toBe(false);
     });
 });
