@@ -49,6 +49,8 @@ exports.parse = function (hashstring) {
  * @returns {boolean}
  */
 exports.is = function (hashstring, split) {
-    var re = new RegExp('^#+' + string.escapeRegExp(split || ''));
+    var reStr = split || '';
+    reStr += '/';
+    var re = new RegExp('^#+' + string.escapeRegExp(reStr));
     return re.test(hashstring);
 };
