@@ -14,13 +14,13 @@ var reHashFlag = /^#([^/]*)/;
 
 /**
  * 设置 hashbang 为 hashstring
- * @param hashbang {String} hashbang
+ * @param path {String} path
  * @param [split] {String} 分隔符
  * @returns {string}
  */
-exports.stringify = function (hashbang, split) {
+exports.stringify = function (path, split) {
     split = split || '';
-    return '#' + split + hashbang;
+    return '#' + split + path;
 };
 
 
